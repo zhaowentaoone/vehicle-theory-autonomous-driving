@@ -13,10 +13,10 @@
 
 ## 交互图（可自己拖参数）
 
-GitHub 上的 Markdown 只能显示静态 SVG。要像课堂上那样拖 \(\psi\)、\(\delta\)、\(v_x\)、\(v_y\)，用浏览器打开：
+GitHub 上的 Markdown 只能显示静态 SVG。要像课堂上那样拖 \(\psi\)、\(\delta\)、\(v_x\)、\(v_y\)，打开：
 
-- [`docs/ch01-frames.html`](docs/ch01-frames.html)（可拖 \(\psi,\delta,v_x,v_y\)）
-- 推送到 GitHub Pages 后，同一文件会在仓库的 Pages 站点上打开。
+- 在线：[第 01 章　坐标系怎么转](https://zhaowentaoone.github.io/vehicle-theory-autonomous-driving/ch01-frames.html)
+- 本地：用浏览器打开 [`docs/ch01-frames.html`](docs/ch01-frames.html)
 
 约定与课件相同：\(x\) 向前、\(y\) 向左、\(\psi\) 逆时针为正。
 
