@@ -1,0 +1,11 @@
+rng(1);
+x = linspace(5,40,36);
+true_c1 = 0.04; true_c0 = -0.3;
+y_true = true_c1*x + true_c0;
+y_det = y_true + 0.15*randn(size(x));
+A = [x(:), ones(numel(x),1)];
+c = A \ y_det(:);
+fprintf('fitted c1=%.4f c0=%.4f\n', c(1), c(2));
+figure; plot(x,y_true,'k--', x,y_det,'k.', x, c(1)*x+c(2),'k-'); grid on;
+legend('true','det','fit'); xlabel('x (m)'); ylabel('y (m)');
+title('Synthetic lane detection + polyfit');

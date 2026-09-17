@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="540" viewBox="0 0 860 540">
+<rect width="860" height="540" fill="#ffffff"/>
+<defs><marker id="arr-fig03" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M 0 1.2 L 9 5 L 0 8.8 z" fill="#1f2937"/></marker></defs>
+<rect x="0" y="0" width="860" height="36" fill="#f8fafc"/>
+<text x="20.0" y="24.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="start">图 1-3　同一根速度矢量，在 {B} 里是 (v_x, v_y)，在地面是 (Ẋ, Ẏ)</text>
+<rect x="16" y="48" width="414" height="450" rx="8" fill="#f8fafc" stroke="#e5e7eb"/>
+<text x="32.0" y="74.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">一般情况：有侧偏 v_y ≠ 0</text>
+<text x="32.0" y="96.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="12" font-weight="500" fill="#6b7280" text-anchor="start">第 05 章动力学保留 v_y</text>
+<line x1="78.0" y1="390.0" x2="149.3" y2="390.0" stroke="#2563eb" stroke-width="2.2" fill="none" marker-end="url(#arr-fig03)"/>
+<line x1="78.0" y1="390.0" x2="78.0" y2="318.7" stroke="#2563eb" stroke-width="2.2" fill="none" marker-end="url(#arr-fig03)"/>
+<circle cx="78.0" cy="390.0" r="3.2" fill="#2563eb" stroke="#1f2937" stroke-width="0.8"/>
+<text x="157.9" y="394.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="12" font-weight="500" fill="#2563eb" text-anchor="middle">X</text>
+<text x="78.0" y="314.1" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="12" font-weight="500" fill="#2563eb" text-anchor="middle">Y</text>
+<polygon points="279.0,181.0 329.9,246.2 166.8,373.6 115.9,308.4" fill="#e5e7eb" stroke="#374151" stroke-width="1.8"/>
+<line x1="259.9" y1="248.4" x2="315.3" y2="205.1" stroke="#374151" stroke-width="1.6" fill="none"/>
+<circle cx="222.9" cy="277.3" r="4.5" fill="#ea580c" stroke="#1f2937" stroke-width="1.0"/>
+<circle cx="266.4" cy="243.3" r="3.4" fill="#fca5a5" stroke="#dc2626" stroke-width="1.0"/>
+<circle cx="164.9" cy="322.6" r="3.4" fill="#93c5fd" stroke="#2563eb" stroke-width="1.0"/>
+<line x1="222.9" y1="277.3" x2="275.5" y2="236.2" stroke="#ea580c" stroke-width="2.2" fill="none" marker-end="url(#arr-fig03)"/>
+<line x1="222.9" y1="277.3" x2="181.8" y2="224.7" stroke="#ea580c" stroke-width="2.2" fill="none" marker-end="url(#arr-fig03)"/>
+<circle cx="222.9" cy="277.3" r="3.2" fill="#ea580c" stroke="#1f2937" stroke-width="0.8"/>
+<text x="281.8" y="235.3" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="12" font-weight="500" fill="#ea580c" text-anchor="middle">x</text>
+<text x="176.9" y="222.4" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="12" font-weight="500" fill="#ea580c" text-anchor="middle">y</text>
+<line x1="222.9" y1="277.3" x2="300.8" y2="216.4" stroke="#ea580c" stroke-width="1.6" fill="none"/>
+<line x1="300.8" y1="216.4" x2="273.9" y2="182.0" stroke="#ea580c" stroke-width="1.6" fill="none"/>
+<text x="306.8" y="232.4" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="500" fill="#ea580c" text-anchor="start">v_x</text>
+<text x="269.4" y="191.2" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="500" fill="#ea580c" text-anchor="start">v_y</text>
+<line x1="222.9" y1="277.3" x2="273.9" y2="182.0" stroke="#dc2626" stroke-width="2.4" fill="none" marker-end="url(#arr-fig03)"/>
+<text x="281.9" y="176.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="15" font-weight="700" fill="#dc2626" text-anchor="start">v</text>
+<line x1="222.9" y1="277.3" x2="273.9" y2="277.3" stroke="#2563eb" stroke-width="1.3" fill="none" stroke-dasharray="4 3"/>
+<line x1="273.9" y1="277.3" x2="273.9" y2="182.0" stroke="#2563eb" stroke-width="1.3" fill="none" stroke-dasharray="4 3"/>
+<text x="248.4" y="290.2" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="500" fill="#2563eb" text-anchor="middle">Ẋ</text>
+<text x="284.0" y="229.6" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="500" fill="#2563eb" text-anchor="start">Ẏ</text>
+<text x="32.0" y="430.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="500" fill="#1f2937" text-anchor="start">Ẋ = v_x cosψ − v_y sinψ</text>
+<text x="32.0" y="454.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="500" fill="#1f2937" text-anchor="start">Ẏ = v_x sinψ + v_y cosψ</text>
+<text x="32.0" y="474.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="12" font-weight="500" fill="#6b7280" text-anchor="start">同一根红箭头，只是换了一组基。</text>
+<rect x="446" y="48" width="414" height="450" rx="8" fill="#f8fafc" stroke="#e5e7eb"/>
+<text x="462.0" y="74.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">运动学常用：v_y = 0</text>
+<text x="462.0" y="96.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="12" font-weight="500" fill="#6b7280" text-anchor="start">第 02 章自行车模型从这里开始</text>
+<line x1="508.0" y1="390.0" x2="579.3" y2="390.0" stroke="#2563eb" stroke-width="2.2" fill="none" marker-end="url(#arr-fig03)"/>
+<line x1="508.0" y1="390.0" x2="508.0" y2="318.7" stroke="#2563eb" stroke-width="2.2" fill="none" marker-end="url(#arr-fig03)"/>
+<circle cx="508.0" cy="390.0" r="3.2" fill="#2563eb" stroke="#1f2937" stroke-width="0.8"/>
+<text x="587.9" y="394.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="12" font-weight="500" fill="#2563eb" text-anchor="middle">X</text>
+<text x="508.0" y="314.1" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="12" font-weight="500" fill="#2563eb" text-anchor="middle">Y</text>
+<polygon points="709.0,181.0 759.9,246.2 596.8,373.6 545.9,308.4" fill="#e5e7eb" stroke="#374151" stroke-width="1.8"/>
+<line x1="689.9" y1="248.4" x2="745.3" y2="205.1" stroke="#374151" stroke-width="1.6" fill="none"/>
+<circle cx="652.9" cy="277.3" r="4.5" fill="#ea580c" stroke="#1f2937" stroke-width="1.0"/>
+<circle cx="696.4" cy="243.3" r="3.4" fill="#fca5a5" stroke="#dc2626" stroke-width="1.0"/>
+<circle cx="594.9" cy="322.6" r="3.4" fill="#93c5fd" stroke="#2563eb" stroke-width="1.0"/>
+<line x1="652.9" y1="277.3" x2="705.5" y2="236.2" stroke="#ea580c" stroke-width="2.2" fill="none" marker-end="url(#arr-fig03)"/>
+<line x1="652.9" y1="277.3" x2="611.8" y2="224.7" stroke="#ea580c" stroke-width="2.2" fill="none" marker-end="url(#arr-fig03)"/>
+<circle cx="652.9" cy="277.3" r="3.2" fill="#ea580c" stroke="#1f2937" stroke-width="0.8"/>
+<text x="711.8" y="235.3" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="12" font-weight="500" fill="#ea580c" text-anchor="middle">x</text>
+<text x="606.9" y="222.4" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="12" font-weight="500" fill="#ea580c" text-anchor="middle">y</text>
+<line x1="652.9" y1="277.3" x2="730.8" y2="216.4" stroke="#ea580c" stroke-width="1.6" fill="none"/>
+<text x="738.8" y="220.4" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="500" fill="#ea580c" text-anchor="start">v_x = v</text>
+<line x1="652.9" y1="277.3" x2="730.8" y2="216.4" stroke="#dc2626" stroke-width="2.4" fill="none" marker-end="url(#arr-fig03)"/>
+<text x="738.8" y="210.4" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="15" font-weight="700" fill="#dc2626" text-anchor="start">v</text>
+<line x1="652.9" y1="277.3" x2="730.8" y2="277.3" stroke="#2563eb" stroke-width="1.3" fill="none" stroke-dasharray="4 3"/>
+<line x1="730.8" y1="277.3" x2="730.8" y2="216.4" stroke="#2563eb" stroke-width="1.3" fill="none" stroke-dasharray="4 3"/>
+<text x="691.9" y="290.2" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="500" fill="#2563eb" text-anchor="middle">Ẋ</text>
+<text x="741.0" y="246.9" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="500" fill="#2563eb" text-anchor="start">Ẏ</text>
+<text x="462.0" y="430.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="500" fill="#1f2937" text-anchor="start">Ẋ = v cosψ</text>
+<text x="462.0" y="454.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="500" fill="#1f2937" text-anchor="start">Ẏ = v sinψ</text>
+<text x="462.0" y="474.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="12" font-weight="500" fill="#6b7280" text-anchor="start">同一根红箭头，只是换了一组基。</text>
+</svg>

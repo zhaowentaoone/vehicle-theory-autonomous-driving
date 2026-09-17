@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="460" viewBox="0 0 860 460">
+<rect width="860" height="460" fill="#ffffff"/>
+<defs><marker id="arr-fig05" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M 0 1.2 L 9 5 L 0 8.8 z" fill="#1f2937"/></marker></defs>
+<rect x="0" y="0" width="860" height="36" fill="#f8fafc"/>
+<text x="20.0" y="24.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="start">图 1-5　硬件在控制模型里被压成两个符号：δ 与 F_x</text>
+<text x="30.0" y="78.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="700" fill="#ea580c" text-anchor="start">转向</text>
+<rect x="30" y="96" width="130" height="48" rx="7" fill="#ffffff" stroke="#ea580c" stroke-width="1.8"/>
+<text x="95.0" y="125.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="600" fill="#ea580c" text-anchor="middle">方向盘</text>
+<line x1="160.0" y1="120.0" x2="175.0" y2="120.0" stroke="#6b7280" stroke-width="1.5" fill="none" marker-end="url(#arr-fig05)"/>
+<rect x="175" y="96" width="130" height="48" rx="7" fill="#ffffff" stroke="#ea580c" stroke-width="1.8"/>
+<text x="240.0" y="125.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="600" fill="#ea580c" text-anchor="middle">管柱 / 齿条</text>
+<line x1="305.0" y1="120.0" x2="340.0" y2="120.0" stroke="#6b7280" stroke-width="1.5" fill="none" marker-end="url(#arr-fig05)"/>
+<rect x="340" y="96" width="130" height="48" rx="7" fill="#ffffff" stroke="#ea580c" stroke-width="1.8"/>
+<text x="405.0" y="125.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="600" fill="#ea580c" text-anchor="middle">左右横拉杆</text>
+<line x1="470.0" y1="120.0" x2="505.0" y2="120.0" stroke="#6b7280" stroke-width="1.5" fill="none" marker-end="url(#arr-fig05)"/>
+<rect x="505" y="96" width="130" height="48" rx="7" fill="#ffffff" stroke="#ea580c" stroke-width="1.8"/>
+<text x="570.0" y="125.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="600" fill="#ea580c" text-anchor="middle">δ_L , δ_R</text>
+<rect x="660" y="88" width="170" height="64" rx="7" fill="#ffffff" stroke="#15803d" stroke-width="1.8"/>
+<text x="745.0" y="125.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="600" fill="#15803d" text-anchor="middle">自行车模型：一个 δ</text>
+<line x1="635.0" y1="120.0" x2="660.0" y2="120.0" stroke="#6b7280" stroke-width="1.5" fill="none" marker-end="url(#arr-fig05)"/>
+<text x="30.0" y="168.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="12" font-weight="500" fill="#6b7280" text-anchor="start">Ackermann：内侧轮转角更大，轴线交于后轴延长线。车道保持转角很小，左右合并即可。</text>
+<text x="30.0" y="210.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="700" fill="#2563eb" text-anchor="start">驱动 / 制动</text>
+<rect x="30" y="228" width="130" height="48" rx="7" fill="#ffffff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="95.0" y="257.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="600" fill="#2563eb" text-anchor="middle">油门 / 电机</text>
+<line x1="160.0" y1="252.0" x2="175.0" y2="252.0" stroke="#6b7280" stroke-width="1.5" fill="none" marker-end="url(#arr-fig05)"/>
+<rect x="175" y="228" width="130" height="48" rx="7" fill="#ffffff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="240.0" y="257.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="600" fill="#2563eb" text-anchor="middle">变速 / 减速</text>
+<line x1="305.0" y1="252.0" x2="340.0" y2="252.0" stroke="#6b7280" stroke-width="1.5" fill="none" marker-end="url(#arr-fig05)"/>
+<rect x="340" y="228" width="130" height="48" rx="7" fill="#ffffff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="405.0" y="257.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="600" fill="#2563eb" text-anchor="middle">差速器 / 半轴</text>
+<line x1="470.0" y1="252.0" x2="505.0" y2="252.0" stroke="#6b7280" stroke-width="1.5" fill="none" marker-end="url(#arr-fig05)"/>
+<rect x="505" y="228" width="130" height="48" rx="7" fill="#ffffff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="570.0" y="257.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="600" fill="#2563eb" text-anchor="middle">车轮纵向力</text>
+<rect x="660" y="220" width="170" height="64" rx="7" fill="#ffffff" stroke="#15803d" stroke-width="1.8"/>
+<text x="745.0" y="257.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="600" fill="#15803d" text-anchor="middle">模型里：一个 F_x</text>
+<line x1="635.0" y1="252.0" x2="660.0" y2="252.0" stroke="#6b7280" stroke-width="1.5" fill="none" marker-end="url(#arr-fig05)"/>
+<text x="30.0" y="300.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="12" font-weight="500" fill="#6b7280" text-anchor="start">刹车是负的 F_x（带饱和）。更粗的模型甚至直接命令加速度 a_x。ABS / 侧倾入门时先忽略。</text>
+<rect x="30" y="324" width="800" height="112" rx="8" fill="#f8fafc" stroke="#e5e7eb"/>
+<text x="50.0" y="356.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="600" fill="#6b7280" text-anchor="start">你在车上做的事</text>
+<text x="330.0" y="356.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="600" fill="#6b7280" text-anchor="start">模型输入</text>
+<text x="560.0" y="356.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="600" fill="#6b7280" text-anchor="start">后面哪一章用</text>
+<text x="50.0" y="386.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="15" font-weight="500" fill="#1f2937" text-anchor="start">拧方向盘</text>
+<text x="330.0" y="386.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="15" font-weight="700" fill="#ea580c" text-anchor="start">前轮转角 δ</text>
+<text x="560.0" y="386.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="500" fill="#6b7280" text-anchor="start">第 02、08、10 章</text>
+<text x="50.0" y="416.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="15" font-weight="500" fill="#1f2937" text-anchor="start">踩电门 / 刹车</text>
+<text x="330.0" y="416.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="15" font-weight="700" fill="#2563eb" text-anchor="start">纵向力 F_x（或 a_x）</text>
+<text x="560.0" y="416.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="500" fill="#6b7280" text-anchor="start">第 04、07 章</text>
+</svg>

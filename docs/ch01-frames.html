@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>第 01 章　坐标系怎么转</title>
+  <style>
+    :root {
+      --bg: #f7f7f5;
+      --card: #ffffff;
+      --ink: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --inertial: #2563eb;
+      --body: #ea580c;
+      --tire: #15803d;
+      --danger: #dc2626;
+      --fill: #e5e7eb;
+      --accent: #2563eb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+    }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 20px 64px; }
+    h1 { font-size: 24px; margin: 0 0 8px; font-weight: 650; }
+    .lead { color: var(--muted); margin: 0 0 20px; line-height: 1.6; }
+    .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+    .tab {
+      border: 1px solid var(--line);
+      background: var(--card);
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 6px 12px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    .tab.active { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .layout { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.9fr); gap: 20px; align-items: start; }
+    @media (max-width: 860px) { .layout { grid-template-columns: 1fr; } }
+    .panel { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px; }
+    svg { display: block; width: 100%; height: auto; background: #fff; }
+    label.row {
+      display: flex; justify-content: space-between; font-size: 13px; font-weight: 600; margin: 12px 0 4px;
+    }
+    label.row span { font-weight: 500; color: var(--muted); }
+    input[type="range"] { width: 100%; accent-color: var(--accent); }
+    .check { display: flex; gap: 8px; align-items: center; margin-top: 12px; font-size: 13px; }
+    .stats { display: flex; gap: 16px; margin-bottom: 10px; }
+    .stat b { display: block; font-size: 22px; }
+    .stat span { color: var(--muted); font-size: 12px; }
+    .side h3 { margin: 0 0 10px; font-size: 14px; }
+    .side p, .side pre { margin: 0 0 8px; font-size: 13px; line-height: 1.55; color: var(--ink); }
+    .side pre { background: #f3f4f6; padding: 10px; border-radius: 8px; overflow: auto; }
+    .warn {
+      margin-top: 12px; padding: 10px 12px; border-radius: 8px;
+      background: #fff7ed; color: #9a3412; font-size: 13px; line-height: 1.5;
+    }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 18px; background: var(--card); }
+    th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+    th { color: var(--muted); font-weight: 600; }
+    .nav { font-size: 13px; margin-bottom: 18px; }
+    .nav a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav"><a href="./index.html">课程主页</a></div>
+    <h1>第 01 章　坐标系怎么转</h1>
+    <p class="lead">拖动滑条，看惯性系、车体系和地面速度如何同时变化。约定与课件相同：x 向前、y 向左、ψ 逆时针为正。</p>
+
+    <div class="tabs" id="tabs">
+      <button class="tab active" data-tab="frames">三个坐标系</button>
+      <button class="tab" data-tab="rotate">点的旋转</button>
+      <button class="tab" data-tab="velocity">速度变换</button>
+      <button class="tab" data-tab="dof">自由度 / 执行器</button>
+    </div>
+
+    <div class="layout">
+      <div>
+        <div class="panel">
+          <svg id="scene" viewBox="0 0 640 400"></svg>
+          <label class="row">横摆角 ψ <span id="psiVal"></span></label>
+          <input id="psi" type="range" min="-20" max="80" step="1" value="35" />
+          <div id="deltaBlock">
+            <label class="row">前轮转角 δ <span id="deltaVal"></span></label>
+            <input id="delta" type="range" min="-30" max="30" step="1" value="18" />
+          </div>
+          <div id="velBlock" hidden>
+            <label class="row">纵向速度 v_x <span id="vxVal"></span></label>
+            <input id="vx" type="range" min="0" max="20" step="0.5" value="12" />
+            <label class="row">侧向速度 v_y <span id="vyVal"></span></label>
+            <input id="vy" type="range" min="-8" max="8" step="0.5" value="3" />
+            <label class="check"><input id="vyZero" type="checkbox" /> 令 v_y = 0（第 02 章运动学常用）</label>
+          </div>
+        </div>
+      </div>
+      <div class="side">
+        <div class="panel" id="info"></div>
+        <div class="warn">最常见的符号坑：不要把 R 写成 [cos, sin; −sin, cos]。那是顺时针为正，或 y 向右。本课程坚持右手系、y 向左、ψ 逆时针为正。</div>
+      </div>
+    </div>
+
+    <div id="dofTable" hidden>
+      <h2 style="font-size:18px;margin:24px 0 8px;">方向盘和油门在公式里变成谁</h2>
+      <table>
+        <thead><tr><th>你在车上做的事</th><th>模型输入</th><th>后面哪一章</th></tr></thead>
+        <tbody>
+          <tr><td>拧方向盘</td><td>前轮转角 δ</td><td>第 02、08、10 章</td></tr>
+          <tr><td>踩电门 / 刹车</td><td>纵向力 F_x（或 a_x）</td><td>第 04、07 章</td></tr>
+          <tr><td>左右前轮不同转角</td><td>Ackermann → 自行车一个 δ</td><td>第 02 章画 ICR</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    const LF = 1.2, LR = 1.6, HALF_L = 2.25, HALF_W = 0.9;
+    const P_BODY = { x: 2.05, y: 0.72 };
+    const CG = { x: 4.35, y: 2.55 };
+    const state = { tab: "frames", psi: 35, delta: 18, vx: 12, vy: 3, vyZero: false };
+
+    const rot = (psi, x, y) => ({ x: Math.cos(psi) * x - Math.sin(psi) * y, y: Math.sin(psi) * x + Math.cos(psi) * y });
+    const fmt = (n, d = 2) => (Math.abs(n) < 1e-9 ? 0 : n).toFixed(d);
+    const to = (x, y) => ({ x: 90 + 52 * x, y: 340 - 52 * y });
+
+    function el(name, attrs, children) {
+      const n = document.createElementNS("http://www.w3.org/2000/svg", name);
+      Object.entries(attrs || {}).forEach(([k, v]) => n.setAttribute(k, v));
+      (children || []).forEach((c) => n.appendChild(typeof c === "string" ? document.createTextNode(c) : c));
+      return n;
+    }
+
+    function draw() {
+      const psi = state.psi * Math.PI / 180;
+      const delta = state.delta * Math.PI / 180;
+      const vy = state.vyZero ? 0 : state.vy;
+      const c = Math.cos(psi), s = Math.sin(psi);
+      const ex = rot(psi, 1, 0), ey = rot(psi, 0, 1);
+      const svg = document.getElementById("scene");
+      svg.innerHTML = "";
+      svg.appendChild(el("defs", {}, [
+        el("marker", { id: "arr", viewBox: "0 0 10 10", refX: "9", refY: "5", markerWidth: "7", markerHeight: "7", orient: "auto-start-reverse" }, [
+          el("path", { d: "M 0 1.2 L 9 5 L 0 8.8 z", fill: "#1f2937" })
+        ])
+      ]));
+      for (let i = 0; i < 12; i++) svg.appendChild(el("line", { x1: to(i,0).x, y1: to(i,0).y, x2: to(i,6.2).x, y2: to(i,6.2).y, stroke: "#eef2f7", "stroke-width": 1 }));
+      for (let j = 0; j < 7; j++) svg.appendChild(el("line", { x1: to(0,j).x, y1: to(0,j).y, x2: to(11.2,j).x, y2: to(11.2,j).y, stroke: "#eef2f7", "stroke-width": 1 }));
+
+      const oI = to(0,0), xI = to(2.2,0), yI = to(0,2.2);
+      svg.appendChild(el("line", { x1: oI.x, y1: oI.y, x2: xI.x, y2: xI.y, stroke: "#2563eb", "stroke-width": 2.2, "marker-end": "url(#arr)" }));
+      svg.appendChild(el("line", { x1: oI.x, y1: oI.y, x2: yI.x, y2: yI.y, stroke: "#2563eb", "stroke-width": 2.2, "marker-end": "url(#arr)" }));
+      svg.appendChild(el("text", { x: xI.x + 8, y: xI.y + 4, fill: "#2563eb", "font-size": 13, "font-weight": 600 }, ["X"]));
+      svg.appendChild(el("text", { x: yI.x - 4, y: yI.y - 8, fill: "#2563eb", "font-size": 13, "font-weight": 600 }, ["Y"]));
+      svg.appendChild(el("text", { x: oI.x - 4, y: oI.y + 18, fill: "#2563eb", "font-size": 12 }, ["{I}"]));
+
+      const corners = [[HALF_L, HALF_W],[HALF_L, -HALF_W],[-HALF_L, -HALF_W],[-HALF_L, HALF_W]]
+        .map(([x,y]) => { const p = rot(psi,x,y); return to(CG.x + p.x, CG.y + p.y); });
+      svg.appendChild(el("polygon", { points: corners.map(p => p.x + "," + p.y).join(" "), fill: "#e5e7eb", stroke: "#374151", "stroke-width": 1.8 }));
+
+      const oB = to(CG.x, CG.y);
+      const xB = to(CG.x + ex.x * 2, CG.y + ex.y * 2);
+      const yB = to(CG.x + ey.x * 2, CG.y + ey.y * 2);
+      const fa = rot(psi, LF, 0), ra = rot(psi, -LR, 0);
+      const front = to(CG.x + fa.x, CG.y + fa.y), rear = to(CG.x + ra.x, CG.y + ra.y);
+      svg.appendChild(el("circle", { cx: oB.x, cy: oB.y, r: 4.5, fill: "#ea580c" }));
+      svg.appendChild(el("circle", { cx: front.x, cy: front.y, r: 3.2, fill: "#dc2626" }));
+      svg.appendChild(el("circle", { cx: rear.x, cy: rear.y, r: 3.2, fill: "#2563eb" }));
+      svg.appendChild(el("line", { x1: oB.x, y1: oB.y, x2: xB.x, y2: xB.y, stroke: "#ea580c", "stroke-width": 2.2, "marker-end": "url(#arr)" }));
+      svg.appendChild(el("line", { x1: oB.x, y1: oB.y, x2: yB.x, y2: yB.y, stroke: "#ea580c", "stroke-width": 2.2, "marker-end": "url(#arr)" }));
+      svg.appendChild(el("text", { x: xB.x + 6, y: xB.y + 4, fill: "#ea580c", "font-size": 13, "font-weight": 600 }, ["x"]));
+      svg.appendChild(el("text", { x: yB.x - 2, y: yB.y - 8, fill: "#ea580c", "font-size": 13, "font-weight": 600 }, ["y"]));
+
+      const hint = (t) => svg.appendChild(el("text", { x: 18, y: 24, fill: "#6b7280", "font-size": 12 }, [t]));
+
+      if (state.tab === "frames") {
+        const tex = rot(psi + delta, 1, 0), tey = rot(psi + delta, 0, 1);
+        const xW = to(CG.x + fa.x + tex.x * 1.45, CG.y + fa.y + tex.y * 1.45);
+        const yW = to(CG.x + fa.x + tey.x * 1.45, CG.y + fa.y + tey.y * 1.45);
+        svg.appendChild(el("line", { x1: front.x, y1: front.y, x2: xW.x, y2: xW.y, stroke: "#15803d", "stroke-width": 2, "marker-end": "url(#arr)" }));
+        svg.appendChild(el("line", { x1: front.x, y1: front.y, x2: yW.x, y2: yW.y, stroke: "#15803d", "stroke-width": 2, "marker-end": "url(#arr)" }));
+        svg.appendChild(el("text", { x: xW.x + 6, y: xW.y + 4, fill: "#15803d", "font-size": 12, "font-weight": 600 }, ["x_w"]));
+        hint("蓝 = 地面，橙 = 车体，绿 = 前轮。拖航向角，看三套轴怎么转。");
+      }
+
+      if (state.tab === "rotate") {
+        const pB = rot(psi, P_BODY.x, P_BODY.y);
+        const P = to(CG.x + pB.x, CG.y + pB.y);
+        const alongX = rot(psi, P_BODY.x, 0);
+        const Px = to(CG.x + alongX.x, CG.y + alongX.y);
+        svg.appendChild(el("line", { x1: oB.x, y1: oB.y, x2: Px.x, y2: Px.y, stroke: "#ea580c", "stroke-width": 1.4, "stroke-dasharray": "4 3" }));
+        svg.appendChild(el("line", { x1: Px.x, y1: Px.y, x2: P.x, y2: P.y, stroke: "#ea580c", "stroke-width": 1.4, "stroke-dasharray": "4 3" }));
+        svg.appendChild(el("line", { x1: P.x, y1: to(CG.x + pB.x, 0).y, x2: P.x, y2: P.y, stroke: "#2563eb", "stroke-width": 1.2, "stroke-dasharray": "3 3" }));
+        svg.appendChild(el("line", { x1: to(0, CG.y + pB.y).x, y1: P.y, x2: P.x, y2: P.y, stroke: "#2563eb", "stroke-width": 1.2, "stroke-dasharray": "3 3" }));
+        svg.appendChild(el("circle", { cx: P.x, cy: P.y, r: 5.5, fill: "#dc2626" }));
+        svg.appendChild(el("text", { x: P.x + 10, y: P.y - 8, fill: "#dc2626", "font-size": 14, "font-weight": 700 }, ["P"]));
+        hint("橙虚线是车体坐标 (x, y)；蓝虚线是地面坐标 (X_P, Y_P)。");
+      }
+
+      if (state.tab === "velocity") {
+        const vScale = 0.16;
+        const tipB = { x: CG.x + ex.x * state.vx * vScale + ey.x * vy * vScale, y: CG.y + ex.y * state.vx * vScale + ey.y * vy * vScale };
+        const tipX = { x: CG.x + ex.x * state.vx * vScale, y: CG.y + ex.y * state.vx * vScale };
+        const vTip = to(tipB.x, tipB.y), vX = to(tipX.x, tipX.y), vInertialX = to(tipB.x, CG.y);
+        svg.appendChild(el("line", { x1: oB.x, y1: oB.y, x2: vX.x, y2: vX.y, stroke: "#ea580c", "stroke-width": 1.6 }));
+        if (Math.abs(vy) > 0.05) svg.appendChild(el("line", { x1: vX.x, y1: vX.y, x2: vTip.x, y2: vTip.y, stroke: "#ea580c", "stroke-width": 1.6 }));
+        svg.appendChild(el("line", { x1: oB.x, y1: oB.y, x2: vInertialX.x, y2: vInertialX.y, stroke: "#2563eb", "stroke-width": 1.3, "stroke-dasharray": "4 3" }));
+        svg.appendChild(el("line", { x1: vInertialX.x, y1: vInertialX.y, x2: vTip.x, y2: vTip.y, stroke: "#2563eb", "stroke-width": 1.3, "stroke-dasharray": "4 3" }));
+        svg.appendChild(el("line", { x1: oB.x, y1: oB.y, x2: vTip.x, y2: vTip.y, stroke: "#dc2626", "stroke-width": 2.6, "marker-end": "url(#arr)" }));
+        svg.appendChild(el("text", { x: vTip.x + 8, y: vTip.y - 6, fill: "#dc2626", "font-size": 14, "font-weight": 700 }, ["v"]));
+        hint("红箭头是同一根速度。橙 = (v_x, v_y)，蓝虚线 = (Ẋ, Ẏ)。");
+      }
+
+      if (state.tab === "dof") {
+        svg.appendChild(el("line", { x1: oB.x, y1: oB.y, x2: xB.x, y2: xB.y, stroke: "#15803d", "stroke-width": 2.4, "marker-end": "url(#arr)" }));
+        svg.appendChild(el("line", { x1: oB.x, y1: oB.y, x2: yB.x, y2: yB.y, stroke: "#dc2626", "stroke-width": 2.2, "marker-end": "url(#arr)" }));
+        svg.appendChild(el("line", { x1: yB.x - 7, y1: yB.y - 7, x2: yB.x + 7, y2: yB.y + 7, stroke: "#dc2626", "stroke-width": 2.2 }));
+        svg.appendChild(el("line", { x1: yB.x - 7, y1: yB.y + 7, x2: yB.x + 7, y2: yB.y - 7, stroke: "#dc2626", "stroke-width": 2.2 }));
+        svg.appendChild(el("text", { x: xB.x + 8, y: xB.y + 16, fill: "#15803d", "font-size": 12 }, ["可滚"]));
+        svg.appendChild(el("text", { x: yB.x + 10, y: yB.y - 6, fill: "#dc2626", "font-size": 12 }, ["不能侧滑"]));
+        hint("平面位形仍是 (X, Y, ψ)。轮胎只限制速度，所以不能横着滑进车位。");
+      }
+
+      document.getElementById("psiVal").textContent = fmt(state.psi, 0) + " deg";
+      document.getElementById("deltaVal").textContent = fmt(state.delta, 0) + " deg";
+      document.getElementById("vxVal").textContent = fmt(state.vx, 1) + " m/s";
+      document.getElementById("vyVal").textContent = fmt(vy, 1) + " m/s";
+      document.getElementById("deltaBlock").hidden = state.tab !== "frames";
+      document.getElementById("velBlock").hidden = state.tab !== "velocity";
+      document.getElementById("dofTable").hidden = state.tab !== "dof";
+
+      const xDot = state.vx * c - vy * s;
+      const yDot = state.vx * s + vy * c;
+      const pI = { x: CG.x + c * P_BODY.x - s * P_BODY.y, y: CG.y + s * P_BODY.x + c * P_BODY.y };
+      const info = document.getElementById("info");
+      if (state.tab === "frames") {
+        info.innerHTML = `<h3>现在这辆车</h3>
+          <div class="stats"><div class="stat"><b>${fmt(state.psi,0)}°</b><span>ψ 航向</span></div>
+          <div class="stat"><b>${fmt(state.delta,0)}°</b><span>δ 前轮</span></div></div>
+          <p>{I} 钉在地面左下角；{B} 钉在橙色质心；绿色是前轮坐标系，相对车体又转了 δ。</p>`;
+      } else if (state.tab === "rotate") {
+        info.innerHTML = `<h3>点 P 的两种写法</h3>
+          <p>车体系 p_B = (${fmt(P_BODY.x)}, ${fmt(P_BODY.y)}) m</p>
+          <p>地面 p_I = origin + R(ψ) p_B = (${fmt(pI.x)}, ${fmt(pI.y)}) m</p>
+          <pre>R(ψ) =
+[ ${fmt(c)}   ${fmt(-s)} ]
+[ ${fmt(s)}   ${fmt(c)} ]</pre>
+          <p>第一列是车体 x 轴在地面的方向，第二列是 y 轴。R⁻¹ = Rᵀ。</p>`;
+      } else if (state.tab === "velocity") {
+        info.innerHTML = `<h3>同一根速度，两组分量</h3>
+          <div class="stats"><div class="stat"><b>${fmt(xDot)}</b><span>Ẋ (m/s)</span></div>
+          <div class="stat"><b>${fmt(yDot)}</b><span>Ẏ (m/s)</span></div></div>
+          <p>Ẋ = v_x cosψ − v_y sinψ = ${fmt(xDot)}</p>
+          <p>Ẏ = v_x sinψ + v_y cosψ = ${fmt(yDot)}</p>
+          <p>${state.vyZero ? "v_y = 0 时退化成 Ẋ = v cosψ、Ẏ = v sinψ，第 02 章从这里开始。" : "第 05 章横向动力学会保留 v_y ≠ 0。"}</p>`;
+      } else {
+        info.innerHTML = `<h3>模型把硬件压成什么</h3>
+          <p>三维刚体 6 个自由度；水平路面约束住 Z、侧倾、俯仰，剩下 (X, Y, ψ)。</p>
+          <p>纯滚动无侧滑是非完整约束：限制速度，不直接减少位形维数。</p>`;
+      }
+    }
+
+    document.getElementById("tabs").addEventListener("click", (e) => {
+      const btn = e.target.closest(".tab");
+      if (!btn) return;
+      state.tab = btn.dataset.tab;
+      document.querySelectorAll(".tab").forEach((b) => b.classList.toggle("active", b === btn));
+      draw();
+    });
+    ["psi","delta","vx","vy"].forEach((id) => {
+      document.getElementById(id).addEventListener("input", (e) => { state[id] = Number(e.target.value); draw(); });
+    });
+    document.getElementById("vyZero").addEventListener("change", (e) => { state.vyZero = e.target.checked; draw(); });
+    draw();
+  </script>
+</body>
+</html>
