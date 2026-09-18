@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="520" viewBox="0 0 860 520">
+<rect width="860" height="520" fill="#ffffff"/>
+<defs><marker id="arr-c2-7" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M 0 1.2 L 9 5 L 0 8.8 z" fill="#1f2937"/></marker></defs>
+<rect x="0" y="0" width="860" height="36" fill="#f8fafc"/>
+<text x="20.0" y="24.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="start">图 2-7　参考点改到质心：后轴仍无侧滑，但质心速度偏一个几何角 β</text>
+<polygon points="387.1,327.5 387.1,397.5 182.1,397.5 182.1,327.5" fill="#e5e7eb" stroke="#374151" stroke-width="1.7"/>
+<polygon points="282.5,354.5 282.5,370.5 237.5,370.5 237.5,354.5" fill="#bbf7d0" stroke="#15803d" stroke-width="1.4"/>
+<polygon points="416.0,344.8 423.6,358.9 384.0,380.2 376.4,366.1" fill="#bbf7d0" stroke="#15803d" stroke-width="1.4"/>
+<circle cx="260.0" cy="362.5" r="5" fill="#2563eb" stroke="#1f2937" stroke-width="1"/>
+<circle cx="340.0" cy="362.5" r="6" fill="#ea580c" stroke="#1f2937" stroke-width="1.1"/>
+<circle cx="260.0" cy="102.5" r="6" fill="#ffffff" stroke="#dc2626" stroke-width="1.6"/>
+<text x="260.0" y="382.5" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="12" font-weight="500" fill="#2563eb" text-anchor="middle">后轴</text>
+<text x="340.0" y="382.5" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="12" font-weight="500" fill="#ea580c" text-anchor="middle">质心</text>
+<text x="250.0" y="92.5" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="700" fill="#dc2626" text-anchor="end">ICR</text>
+<line x1="260.0" y1="362.5" x2="260.0" y2="102.5" stroke="#6b7280" stroke-width="1.2" fill="none" stroke-dasharray="4 3"/>
+<line x1="340.0" y1="362.5" x2="260.0" y2="102.5" stroke="#ea580c" stroke-width="1.5" fill="none" stroke-dasharray="4 3"/>
+<line x1="340.0" y1="362.5" x2="426.0" y2="336.0" stroke="#dc2626" stroke-width="2.4" fill="none" marker-end="url(#arr-c2-7)"/>
+<text x="433.5" y="336.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="500" fill="#dc2626" text-anchor="start">质心速度</text>
+<line x1="340.0" y1="362.5" x2="420.0" y2="362.5" stroke="#ea580c" stroke-width="1.5" fill="none"/>
+<text x="375.0" y="335.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="16" font-weight="700" fill="#dc2626" text-anchor="start">β</text>
+<text x="70.0" y="500.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="500" fill="#6b7280" text-anchor="start">tanβ = l_r / R = l_r tanδ / L。这个 β 是几何量，不是第 05 章由侧向力产生的动力学侧偏角。</text>
+</svg>

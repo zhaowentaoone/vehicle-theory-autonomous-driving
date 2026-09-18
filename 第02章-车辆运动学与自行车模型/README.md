@@ -2,8 +2,10 @@
 
 - **前置**：第 01 章旋转矩阵与 $\dot X=v\cos\psi$。
 - **建议学时**：8 小时。
-- **学完能做什么**：从 Ackermann 几何写出自行车模型；前向欧拉离散化；用常转角仿真出圆；解释曲率 $\kappa=\tan\delta/L$。
+- **学完能做什么**：从 Ackermann 几何一步步写出自行车模型；前向欧拉离散化；用常转角仿真出圆；解释曲率 $\kappa=\tan\delta/L$。
 - **和自动驾驶的关系**：低速规划、大量轨迹跟踪 MPC、停车场规划，默认被控对象就是这个模型。
+
+课件按「先图、再推一步、再出一个式子」写，不要跳着只背三行微分方程。交互图：[自行车模型与 ICR](https://zhaowentaoone.github.io/vehicle-theory-autonomous-driving/ch02-bicycle.html)。
 
 ## 阅读顺序
 

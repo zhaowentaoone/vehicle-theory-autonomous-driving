@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="470" viewBox="0 0 860 470">
+<rect width="860" height="470" fill="#ffffff"/>
+<defs><marker id="arr-c2-9" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M 0 1.2 L 9 5 L 0 8.8 z" fill="#1f2937"/></marker></defs>
+<rect x="0" y="0" width="860" height="36" fill="#f8fafc"/>
+<text x="20.0" y="24.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="start">图 2-9　常转角本应走圆弧；欧拉用切线弦代替弧，步长大了圆会裂开</text>
+<circle cx="250" cy="270" r="140" fill="none" stroke="#2563eb" stroke-width="2"/>
+<text x="250.0" y="118.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="500" fill="#2563eb" text-anchor="middle">真实圆弧</text>
+<circle cx="388.4" cy="290.9" r="5" fill="#15803d" stroke="#1f2937" stroke-width="1"/>
+<line x1="388.4" y1="290.9" x2="381.3" y2="338.4" stroke="#ea580c" stroke-width="2.2" fill="none"/>
+<circle cx="381.3" cy="338.4" r="3.5" fill="#ea580c"/>
+<line x1="381.3" y1="338.4" x2="355.4" y2="378.8" stroke="#ea580c" stroke-width="2.2" fill="none"/>
+<circle cx="355.4" cy="378.8" r="3.5" fill="#ea580c"/>
+<line x1="355.4" y1="378.8" x2="315.2" y2="405.1" stroke="#ea580c" stroke-width="2.2" fill="none"/>
+<circle cx="315.2" cy="405.1" r="3.5" fill="#ea580c"/>
+<line x1="315.2" y1="405.1" x2="267.8" y2="412.8" stroke="#ea580c" stroke-width="2.2" fill="none"/>
+<circle cx="267.8" cy="412.8" r="3.5" fill="#ea580c"/>
+<line x1="267.8" y1="412.8" x2="221.4" y2="400.5" stroke="#ea580c" stroke-width="2.2" fill="none" marker-end="url(#arr-c2-9)"/>
+<circle cx="221.4" cy="400.5" r="3.5" fill="#ea580c"/>
+<text x="229.4" y="404.5" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="500" fill="#ea580c" text-anchor="start">欧拉折线</text>
+<rect x="500" y="60" width="340" height="370" rx="8" fill="#f8fafc" stroke="#e5e7eb"/>
+<text x="518.0" y="90.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="600" fill="#1f2937" text-anchor="start">前向欧拉在想什么</text>
+<text x="518.0" y="122.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="500" fill="#6b7280" text-anchor="start">用此刻的速度直线冲 Δt</text>
+<text x="518.0" y="148.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="600" fill="#2563eb" text-anchor="start">X ← X + Δt v cosψ</text>
+<text x="518.0" y="174.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="600" fill="#2563eb" text-anchor="start">Y ← Y + Δt v sinψ</text>
+<text x="518.0" y="200.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="600" fill="#2563eb" text-anchor="start">ψ ← ψ + Δt (v/L) tanδ</text>
+<text x="518.0" y="240.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="600" fill="#15803d" text-anchor="start">Δt 很小：折线贴着圆</text>
+<text x="518.0" y="266.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="600" fill="#dc2626" text-anchor="start">Δt 很大：一步切出去</text>
+<text x="518.0" y="304.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="600" fill="#1f2937" text-anchor="start">常 v、δ 时有精确圆弧公式</text>
+<text x="518.0" y="330.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="500" fill="#6b7280" text-anchor="start">一步转 Δψ = v Δt / R</text>
+<text x="518.0" y="356.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="500" fill="#6b7280" text-anchor="start">几何上没有局部截断误差。</text>
+<text x="518.0" y="392.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="500" fill="#6b7280" text-anchor="start">本课程仿真默认 Δt = 0.01 s。</text>
+</svg>

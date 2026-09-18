@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="500" viewBox="0 0 860 500">
+<rect width="860" height="500" fill="#ffffff"/>
+<defs><marker id="arr-c2-4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M 0 1.2 L 9 5 L 0 8.8 z" fill="#1f2937"/></marker></defs>
+<rect x="0" y="0" width="860" height="36" fill="#f8fafc"/>
+<text x="20.0" y="24.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="start">图 2-4　后轴无侧滑：速度只能沿车头，再投影到地面</text>
+<rect x="16" y="52" width="400" height="400" rx="8" fill="#f8fafc" stroke="#e5e7eb"/>
+<text x="36.0" y="78.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">第一步：在车上写速度</text>
+<polygon points="281.4,279.6 281.4,334.7 144.6,334.7 144.6,279.6" fill="#e5e7eb" stroke="#374151" stroke-width="1.7"/>
+<polygon points="212.6,301.0 212.6,313.2 180.6,313.2 180.6,301.0" fill="#bbf7d0" stroke="#15803d" stroke-width="1.4"/>
+<polygon points="300.3,296.4 304.1,308.0 273.7,317.8 270.0,306.2" fill="#bbf7d0" stroke="#15803d" stroke-width="1.4"/>
+<line x1="196.6" y1="307.1" x2="265.0" y2="307.1" stroke="#ea580c" stroke-width="2.4" fill="none" marker-end="url(#arr-c2-4)"/>
+<text x="239.0" y="319.3" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="700" fill="#ea580c" text-anchor="start">v</text>
+<line x1="196.6" y1="307.1" x2="196.6" y2="263.4" stroke="#dc2626" stroke-width="1.8" fill="none" marker-end="url(#arr-c2-4)"/>
+<line x1="189.6" y1="256.4" x2="203.6" y2="270.4" stroke="#dc2626" stroke-width="2.2" fill="none"/>
+<line x1="189.6" y1="270.4" x2="203.6" y2="256.4" stroke="#dc2626" stroke-width="2.2" fill="none"/>
+<text x="36.0" y="420.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="500" fill="#6b7280" text-anchor="start">无侧滑：后轴不能有车体 y 方向速度。</text>
+<rect x="444" y="52" width="400" height="400" rx="8" fill="#f8fafc" stroke="#e5e7eb"/>
+<text x="464.0" y="78.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">第二步：变到地面</text>
+<polygon points="688.8,245.2 712.9,294.7 590.0,354.7 565.8,305.1" fill="#e5e7eb" stroke="#374151" stroke-width="1.7"/>
+<polygon points="636.3,294.6 641.6,305.6 612.9,319.6 607.6,308.6" fill="#bbf7d0" stroke="#15803d" stroke-width="1.4"/>
+<polygon points="713.1,252.0 721.6,260.7 698.6,282.9 690.2,274.2" fill="#bbf7d0" stroke="#15803d" stroke-width="1.4"/>
+<line x1="624.6" y1="307.1" x2="686.1" y2="277.1" stroke="#ea580c" stroke-width="2.4" fill="none" marker-end="url(#arr-c2-4)"/>
+<text x="662.7" y="300.7" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="700" fill="#ea580c" text-anchor="start">v</text>
+<line x1="624.6" y1="307.1" x2="605.4" y2="267.8" stroke="#dc2626" stroke-width="1.8" fill="none" marker-end="url(#arr-c2-4)"/>
+<line x1="598.4" y1="260.8" x2="612.4" y2="274.8" stroke="#dc2626" stroke-width="2.2" fill="none"/>
+<line x1="598.4" y1="274.8" x2="612.4" y2="260.8" stroke="#dc2626" stroke-width="2.2" fill="none"/>
+<line x1="529.6" y1="373.6" x2="586.6" y2="373.6" stroke="#2563eb" stroke-width="2.0" fill="none" marker-end="url(#arr-c2-4)"/>
+<line x1="529.6" y1="373.6" x2="529.6" y2="316.6" stroke="#2563eb" stroke-width="2.0" fill="none" marker-end="url(#arr-c2-4)"/>
+<text x="592.3" y="377.6" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="500" fill="#2563eb" text-anchor="start">X</text>
+<text x="529.6" y="310.9" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="500" fill="#2563eb" text-anchor="start">Y</text>
+<line x1="624.6" y1="307.1" x2="686.1" y2="307.1" stroke="#2563eb" stroke-width="1.3" fill="none" stroke-dasharray="4 3"/>
+<line x1="686.1" y1="307.1" x2="686.1" y2="277.1" stroke="#2563eb" stroke-width="1.3" fill="none" stroke-dasharray="4 3"/>
+<text x="464.0" y="408.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="600" fill="#1f2937" text-anchor="start">Ẋ = v cosψ</text>
+<text x="464.0" y="430.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="600" fill="#1f2937" text-anchor="start">Ẏ = v sinψ</text>
+<text x="464.0" y="448.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="12" font-weight="500" fill="#6b7280" text-anchor="start">这就是第 01 章 R(ψ) 乘 (v, 0)。</text>
+</svg>

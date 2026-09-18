@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="520" viewBox="0 0 860 520">
+<rect width="860" height="520" fill="#ffffff"/>
+<defs><marker id="arr-c2-5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M 0 1.2 L 9 5 L 0 8.8 z" fill="#1f2937"/></marker></defs>
+<rect x="0" y="0" width="860" height="36" fill="#f8fafc"/>
+<text x="20.0" y="24.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="start">图 2-5　前轮对准 ICR：直角三角形给出 R = L / tanδ，再得到 ψ̇</text>
+<polygon points="395.8,320.5 395.8,390.7 187.8,390.7 187.8,320.5" fill="#e5e7eb" stroke="#374151" stroke-width="1.7"/>
+<polygon points="291.8,346.8 291.8,364.4 241.8,364.4 241.8,346.8" fill="#bbf7d0" stroke="#15803d" stroke-width="1.4"/>
+<polygon points="429.9,335.7 438.5,351.1 394.9,375.5 386.3,360.1" fill="#bbf7d0" stroke="#15803d" stroke-width="1.4"/>
+<circle cx="266.8" cy="355.6" r="5.5" fill="#2563eb" stroke="#1f2937" stroke-width="1"/>
+<circle cx="412.4" cy="355.6" r="5.5" fill="#dc2626" stroke="#1f2937" stroke-width="1"/>
+<circle cx="266.8" cy="95.6" r="6.5" fill="#ffffff" stroke="#dc2626" stroke-width="1.7"/>
+<text x="254.8" y="85.6" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="16" font-weight="700" fill="#dc2626" text-anchor="end">ICR</text>
+<line x1="266.8" y1="355.6" x2="412.4" y2="355.6" stroke="#ea580c" stroke-width="2.2" fill="none"/>
+<line x1="266.8" y1="355.6" x2="266.8" y2="95.6" stroke="#2563eb" stroke-width="2.2" fill="none"/>
+<line x1="412.4" y1="355.6" x2="266.8" y2="95.6" stroke="#15803d" stroke-width="2.0" fill="none"/>
+<line x1="285.0" y1="355.6" x2="285.0" y2="337.4" stroke="#1f2937" stroke-width="1.2" fill="none"/>
+<line x1="266.8" y1="337.4" x2="285.0" y2="337.4" stroke="#1f2937" stroke-width="1.2" fill="none"/>
+<text x="339.6" y="372.2" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="700" fill="#ea580c" text-anchor="middle">轴距 L</text>
+<text x="238.2" y="225.6" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="16" font-weight="700" fill="#2563eb" text-anchor="end">R</text>
+<text x="425.4" y="295.8" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="18" font-weight="700" fill="#15803d" text-anchor="start">δ</text>
+<rect x="560" y="70" width="280" height="390" rx="8" fill="#f8fafc" stroke="#e5e7eb"/>
+<text x="578.0" y="100.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">对直角三角形：</text>
+<text x="578.0" y="132.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="500" fill="#6b7280" text-anchor="start">对边 L，邻边 R</text>
+<text x="578.0" y="164.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="700" fill="#15803d" text-anchor="start">tan δ = L / R</text>
+<text x="578.0" y="196.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="700" fill="#2563eb" text-anchor="start">于是  R = L / tanδ</text>
+<text x="578.0" y="228.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">刚体绕 ICR 转：</text>
+<text x="578.0" y="260.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="500" fill="#6b7280" text-anchor="start">后轴线速度 v = ω R</text>
+<text x="578.0" y="292.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="500" fill="#6b7280" text-anchor="start">ω 就是横摆角速度 ψ̇</text>
+<text x="578.0" y="324.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="700" fill="#ea580c" text-anchor="start">所以  ψ̇ = v / R</text>
+<text x="578.0" y="356.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">代入 R：</text>
+<text x="578.0" y="388.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="700" fill="#dc2626" text-anchor="start">ψ̇ = (v / L) tanδ</text>
+</svg>

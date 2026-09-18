@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="540" viewBox="0 0 860 540">
+<rect width="860" height="540" fill="#ffffff"/>
+<defs><marker id="arr-c2-2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M 0 1.2 L 9 5 L 0 8.8 z" fill="#1f2937"/></marker></defs>
+<rect x="0" y="0" width="860" height="36" fill="#f8fafc"/>
+<text x="20.0" y="24.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="start">图 2-2　Ackermann：每个轮的轴线都穿过 ICR，内侧前轮转得更大</text>
+<polygon points="429.8,328.9 429.8,406.6 245.0,406.6 245.0,328.9" fill="#e5e7eb" stroke="#374151" stroke-width="1.7"/>
+<polygon points="447.5,320.6 454.0,333.3 418.1,351.8 411.6,339.1" fill="#bbf7d0" stroke="#15803d" stroke-width="1.4"/>
+<polygon points="448.8,385.0 454.2,398.3 416.8,413.4 411.4,400.1" fill="#bbf7d0" stroke="#15803d" stroke-width="1.4"/>
+<polygon points="335.4,329.1 335.4,343.3 295.0,343.3 295.0,329.1" fill="#bbf7d0" stroke="#15803d" stroke-width="1.4"/>
+<polygon points="335.4,392.1 335.4,406.3 295.0,406.3 295.0,392.1" fill="#bbf7d0" stroke="#15803d" stroke-width="1.4"/>
+<circle cx="315.2" cy="107.3" r="6.5" fill="#ffffff" stroke="#dc2626" stroke-width="1.7"/>
+<text x="315.2" y="93.3" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="16" font-weight="700" fill="#dc2626" text-anchor="middle">ICR</text>
+<line x1="432.8" y1="336.2" x2="315.2" y2="107.3" stroke="#6b7280" stroke-width="1.05" fill="none" stroke-dasharray="4 3"/>
+<line x1="432.8" y1="399.2" x2="315.2" y2="107.3" stroke="#6b7280" stroke-width="1.05" fill="none" stroke-dasharray="4 3"/>
+<line x1="315.2" y1="336.2" x2="315.2" y2="107.3" stroke="#6b7280" stroke-width="1.05" fill="none" stroke-dasharray="4 3"/>
+<line x1="315.2" y1="399.2" x2="315.2" y2="107.3" stroke="#6b7280" stroke-width="1.05" fill="none" stroke-dasharray="4 3"/>
+<line x1="315.2" y1="367.7" x2="315.2" y2="107.3" stroke="#6b7280" stroke-width="1.05" fill="none" stroke-dasharray="4 3"/>
+<line x1="315.2" y1="336.2" x2="315.2" y2="399.2" stroke="#2563eb" stroke-width="1.6" fill="none"/>
+<line x1="432.8" y1="336.2" x2="432.8" y2="399.2" stroke="#ea580c" stroke-width="1.6" fill="none"/>
+<text x="455.9" y="313.1" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="500" fill="#15803d" text-anchor="start">δ_内（更大）</text>
+<text x="455.9" y="405.5" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="500" fill="#15803d" text-anchor="start">δ_外</text>
+<text x="70.0" y="44.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="500" fill="#6b7280" text-anchor="start">后轮转角 = 0，所以 ICR 只能落在后轴延长线上。</text>
+<text x="70.0" y="520.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="500" fill="#6b7280" text-anchor="start">tan δ_内 = L / (R − t/2)，tan δ_外 = L / (R + t/2)。轮距 t 远小于 R 时，两者几乎相等。</text>
+</svg>

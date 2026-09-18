@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="460" viewBox="0 0 860 460">
+<rect width="860" height="460" fill="#ffffff"/>
+<defs><marker id="arr-c2-8" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M 0 1.2 L 9 5 L 0 8.8 z" fill="#1f2937"/></marker></defs>
+<rect x="0" y="0" width="860" height="36" fill="#f8fafc"/>
+<text x="20.0" y="24.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="start">图 2-8　路径曲率 κ = dψ/ds；自行车把它变成转角 δ = arctan(κ L)</text>
+<rect x="30" y="56" width="500" height="370" rx="8" fill="#f8fafc" stroke="#e5e7eb"/>
+<polyline points="70.0,330.0 81.0,329.9 92.1,329.5 103.1,328.9 114.1,328.1 125.1,327.0 136.2,325.7 147.2,324.2 158.2,322.4 169.2,320.4 180.3,318.2 191.3,315.7 202.3,313.0 213.3,310.0 224.4,306.8 235.4,303.4 246.4,299.7 257.4,295.8 268.5,291.7 279.5,287.3 290.5,282.7 301.5,277.8 312.6,272.7 323.6,267.4 334.6,261.8 345.6,256.0 356.7,250.0 367.7,243.7 378.7,237.2 389.7,230.5 400.8,223.5 411.8,216.3 422.8,208.8 433.8,201.1 444.9,193.2 455.9,185.0 466.9,176.6 477.9,168.0 489.0,159.1 500.0,150.0" fill="none" stroke="#2563eb" stroke-width="2.4"/>
+<line x1="220.5" y1="307.9" x2="287.7" y2="288.3" stroke="#ea580c" stroke-width="2.0" fill="none" marker-end="url(#arr-c2-8)"/>
+<line x1="306.5" y1="275.6" x2="370.1" y2="246.3" stroke="#ea580c" stroke-width="2.0" fill="none" marker-end="url(#arr-c2-8)"/>
+<circle cx="220.5" cy="307.9" r="4.5" fill="#ea580c" stroke="#1f2937" stroke-width="1"/>
+<circle cx="306.5" cy="275.6" r="4.5" fill="#ea580c" stroke="#1f2937" stroke-width="1"/>
+<text x="216.5" y="329.9" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="500" fill="#ea580c" text-anchor="start">ψ</text>
+<text x="314.5" y="297.6" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="500" fill="#ea580c" text-anchor="start">ψ+dψ</text>
+<text x="263.5" y="319.8" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="500" fill="#2563eb" text-anchor="middle">ds</text>
+<text x="50.0" y="400.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="500" fill="#6b7280" text-anchor="start">沿路径走一小段弧长 ds，航向增加 dψ，则 κ = dψ / ds。</text>
+<rect x="550" y="56" width="290" height="370" rx="8" fill="#f8fafc" stroke="#e5e7eb"/>
+<text x="568.0" y="90.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="500" fill="#6b7280" text-anchor="start">ds = v dt</text>
+<text x="568.0" y="128.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="500" fill="#6b7280" text-anchor="start">dψ = ψ̇ dt</text>
+<text x="568.0" y="166.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="700" fill="#1f2937" text-anchor="start">κ = dψ/ds = ψ̇ / v</text>
+<text x="568.0" y="214.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="500" fill="#6b7280" text-anchor="start">代入自行车 ψ̇：</text>
+<text x="568.0" y="252.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="700" fill="#15803d" text-anchor="start">κ = tanδ / L</text>
+<text x="568.0" y="300.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="500" fill="#6b7280" text-anchor="start">反过来给规划器用：</text>
+<text x="568.0" y="338.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="700" fill="#2563eb" text-anchor="start">δ = arctan(κ L)</text>
+<text x="568.0" y="380.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="500" fill="#6b7280" text-anchor="start">闭环还要改误差（第 08 章）</text>
+</svg>

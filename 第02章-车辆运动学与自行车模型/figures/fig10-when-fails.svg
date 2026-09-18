@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="430" viewBox="0 0 860 430">
+<rect width="860" height="430" fill="#ffffff"/>
+<defs><marker id="arr-c2-10" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M 0 1.2 L 9 5 L 0 8.8 z" fill="#1f2937"/></marker></defs>
+<rect x="0" y="0" width="860" height="36" fill="#f8fafc"/>
+<text x="20.0" y="24.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="start">图 2-10　运动学何时定性错：侧向加速度大、轮胎要侧偏角才能提供力</text>
+<rect x="20" y="52" width="400" height="340" rx="8" fill="#f8fafc" stroke="#e5e7eb"/>
+<text x="220.0" y="80.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="700" fill="#15803d" text-anchor="middle">低速 / 小曲率：运动学够用</text>
+<text x="40.0" y="120.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="500" fill="#6b7280" text-anchor="start">几何要求的向心加速度</text>
+<text x="40.0" y="148.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="15" font-weight="700" fill="#1f2937" text-anchor="start">a_y ≈ v² κ = v² tanδ / L</text>
+<text x="40.0" y="186.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="500" fill="#1f2937" text-anchor="start">若 a_y 只有 0.1 g 量级，</text>
+<text x="40.0" y="214.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="500" fill="#1f2937" text-anchor="start">轮胎几乎不用侧偏就能提供力，</text>
+<text x="40.0" y="242.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="500" fill="#1f2937" text-anchor="start">车真的按几何圆走。</text>
+<text x="40.0" y="286.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="500" fill="#15803d" text-anchor="start">停车场、低速跟线、教学仿真</text>
+<text x="40.0" y="314.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="500" fill="#15803d" text-anchor="start">→ 用本章模型。</text>
+<rect x="440" y="52" width="400" height="340" rx="8" fill="#f8fafc" stroke="#e5e7eb"/>
+<text x="640.0" y="80.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="700" fill="#dc2626" text-anchor="middle">高速 / 大曲率：必须上动力学</text>
+<text x="460.0" y="120.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="15" font-weight="700" fill="#dc2626" text-anchor="start">粗判：v² κ > 0.3 g</text>
+<text x="460.0" y="156.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="500" fill="#1f2937" text-anchor="start">轮胎要先有侧偏角才有侧向力，</text>
+<text x="460.0" y="184.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="500" fill="#1f2937" text-anchor="start">实际曲率小于几何 tanδ/L</text>
+<text x="460.0" y="212.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="500" fill="#1f2937" text-anchor="start">（不足转向：你打了方向，弯没那么急）。</text>
+<text x="460.0" y="250.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="500" fill="#1f2937" text-anchor="start">冰雪、甩尾、ESP：几何约束先破。</text>
+<text x="460.0" y="286.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="500" fill="#6b7280" text-anchor="start">这些现象第 03、05 章才解释。</text>
+<text x="460.0" y="318.0" font-family="Segoe UI, Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="500" fill="#6b7280" text-anchor="start">现在先把几何模型写对。</text>
+</svg>
